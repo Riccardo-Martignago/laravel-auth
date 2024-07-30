@@ -14,7 +14,6 @@
                         </div>
                     @endif
                     {{ __('Benvenuto!') }}
-                    <a href="{{ route('admin.projects.index')}}">ccc</a>
                 </div>
             </div>
         </div>

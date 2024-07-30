@@ -1,24 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <a href="{{ route ('admin.project.show') }}" class="card-link">Progetto</a>
-                <a href="{{ route ('admin.project.edit') }}" class="card-link">Aggiorna</a>
-            </tr>
-        </tbody>
-    </table>
+    <article class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrizione</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($projects as $project)
+                    <tr>
+                        <th scope="row">{{ $project->id }}</th>
+                        <td>{{ $project->name }}</td>
+                        <td>{{ $project->description }}</td>
+                        <td>
+                            <a href="{{ route ('admin.project.show', $project) }}" class="card-link"> Progetto </a>
+                            <a href="{{ route ('admin.project.edit', $project) }}" class="card-link"> Aggiorna </a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </article>
 @endsection
