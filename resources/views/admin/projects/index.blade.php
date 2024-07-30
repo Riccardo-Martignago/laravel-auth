@@ -17,8 +17,8 @@
                         <td>{{ $project->name }}</td>
                         <td>{{ $project->description }}</td>
                         <td>
-                            <a href="{{ route ('admin.project.show', $project) }}" class="card-link"> Progetto </a>
-                            <a href="{{ route ('admin.project.edit', $project) }}" class="card-link"> Aggiorna </a>
+                            <a href="{{ route ('admin.projects.show', $project) }}" class="card-link"> Progetto </a>
+                            <a href="{{ route ('admin.projects.edit', $project) }}" class="card-link"> Aggiorna </a>
                         </td>
                     </tr>
                 @endforeach
