@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    {{ __('Benvenuto!') }}
+                    <a href="{{ route('admin.projects.index')}}">ccc</a>
                 </div>
             </div>
         </div>

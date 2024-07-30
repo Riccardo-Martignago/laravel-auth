@@ -22,7 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [GuestHomeController::class, 'index'])->name('home');
-Route::middleware('auth')->name('admin.')->prefix('admin/')->group (function(){
+Route::middleware('auth')->name('admin.')->prefix('admin')->group (function(){
         Route::resource('project', ProjectController::class);
     }
 );

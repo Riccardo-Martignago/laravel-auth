@@ -16,8 +16,8 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-                <a href="{{ route ('admin.project.show', $animal)}}" class="card-link">Progetto</a>
-                <a href="{{ route ('admin.project.edit', $animal)}}" class="card-link">Aggiorna</a>
+                <a href="{{ route ('admin.project.show') }}" class="card-link">Progetto</a>
+                <a href="{{ route ('admin.project.edit') }}" class="card-link">Aggiorna</a>
             </tr>
         </tbody>
     </table>
